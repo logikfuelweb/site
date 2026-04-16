@@ -52,16 +52,16 @@
       font-weight: 600;
       color: var(--gray-900);
     }
-   
-.logo {
-  height: 100px;
-  width: auto;
-  display: block;
-}
+
+    .logo {
+      height: 32px;
+      width: auto;
+      display: block;
+    }
 
     /* Hero */
     .hero {
-      padding: 72px 0 60px;
+      padding: 56px 0 48px;
       background:
         radial-gradient(800px circle at 15% 20%, var(--orange-soft), transparent 70%);
     }
@@ -93,6 +93,10 @@
       padding: 56px 0;
     }
 
+    section#architecture {
+      padding-top: 40px;
+    }
+
     section.alt {
       background: #fafafa;
     }
@@ -110,14 +114,7 @@
       margin-bottom: 32px;
     }
 
-    /* Divider */
-    .divider {
-      height: 1px;
-      background: var(--border);
-      margin: 36px 0;
-    }
-
-    /* SVG Architecture Flow */
+    /* Architecture Diagram */
     .architecture-diagram {
       border: 1px solid var(--border);
       border-radius: 12px;
@@ -163,19 +160,26 @@
       margin-bottom: 6px;
     }
 
-    /* Quote */
-    .quote {
+    /* Testimonials (stacked blocks) */
+    .testimonial-block {
       max-width: 780px;
-      font-size: 1.15rem;
-      color: var(--gray-900);
+      margin: 0 auto 48px;
+      padding-left: 20px;
+      border-left: 3px solid var(--border);
     }
 
-    .quote span {
-      display: block;
-      margin-top: 12px;
-      font-size: 0.85rem;
-      color: var(--gray-500);
+    .testimonial-quote {
+      margin: 0 0 12px;
+      font-size: 1.1rem;
+      color: var(--gray-900);
+      line-height: 1.6;
+    }
+
+    .testimonial-author {
+      margin: 0;
       font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--gray-700);
     }
 
     /* CTA */
@@ -218,16 +222,14 @@
 
 <header>
   <div class="container">
-
-<nav>
-  <img src="assets/images/logo.svg" alt="LogikFuel logo" class="logo">
-  <div>
-    #architectureArchitecture</a>
-    #partnershipPartnership</a>
-    #contactContact</a>
-  </div>
-</nav>
-
+    <nav>
+      <img src="assets/images/logo.svg" alt="LogikFuel logo" class="logo">
+      <div>
+        <a href="#architecture">Architecture</a>
+        <a href="#partnership">Partnership</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
   </div>
 </header>
 
@@ -252,74 +254,66 @@
       not replace it.
     </p>
 
-<svg viewBox="0 0 900 170" width="100%" height="170"
-     xmlns="http://www.w3.org/2000/svg">
+    <div class="architecture-diagram">
+      <svg viewBox="0 0 900 170" width="100%" height="170"
+           xmlns="http://www.w3.org/2000/svg">
 
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10"
-            refX="0" refY="3" orient="auto"
-            markerUnits="strokeWidth">
-      <path d="M0,0 L0,6 L9,3 z" fill="#f97316"/>
-    </marker>
-  </defs>
+        <defs>
+          <marker id="arrow" markerWidth="10" markerHeight="10"
+                  refX="0" refY="3" orient="auto"
+                  markerUnits="strokeWidth">
+            <path d="M0,0 L0,6 L9,3 z" fill="#f97316"/>
+          </marker>
+        </defs>
 
-  <!-- Box 1 -->
-  <rect x="20" y="30" width="240" height="80" rx="10"
-        fill="#ffffff" stroke="#d1d5db"/>
+        <rect x="20" y="30" width="240" height="80" rx="10"
+              fill="#ffffff" stroke="#d1d5db"/>
 
-  <text x="140" y="66" text-anchor="middle"
-        font-size="18" font-weight="700"
-        fill="#0f172a">
-    Operations &amp; Flow
-  </text>
-  <text x="140" y="92" text-anchor="middle"
-        font-size="13"
-        fill="#475569">
-    Plan · Make · Move
-  </text>
+        <text x="140" y="66" text-anchor="middle"
+              font-size="18" font-weight="700"
+              fill="#0f172a">
+          Operations &amp; Flow
+        </text>
+        <text x="140" y="92" text-anchor="middle"
+              font-size="13" fill="#475569">
+          Plan · Make · Move
+        </text>
 
-  <!-- Arrow 1 (floating, not touching boxes) -->
-  <line x1="280" y1="70" x2="320" y2="70"
-        stroke="#f97316" stroke-width="2"
-        marker-end="url(#arrow)"/>
+        <line x1="280" y1="70" x2="320" y2="70"
+              stroke="#f97316" stroke-width="2"
+              marker-end="url(#arrow)"/>
 
-  <!-- Box 2 (neutral, not highlighted) -->
-  <rect x="340" y="30" width="220" height="80" rx="10"
-        fill="#ffffff" stroke="#d1d5db"/>
+        <rect x="340" y="30" width="220" height="80" rx="10"
+              fill="#ffffff" stroke="#d1d5db"/>
 
-  <text x="450" y="66" text-anchor="middle"
-        font-size="18" font-weight="700"
-        fill="#0f172a">
-    Decision Structure
-  </text>
-  <text x="450" y="92" text-anchor="middle"
-        font-size="13"
-        fill="#475569">
-    Ownership · Tradeoffs
-  </text>
+        <text x="450" y="66" text-anchor="middle"
+              font-size="18" font-weight="700"
+              fill="#0f172a">
+          Decision Structure
+        </text>
+        <text x="450" y="92" text-anchor="middle"
+              font-size="13" fill="#475569">
+          Ownership · Tradeoffs
+        </text>
 
-  <!-- Arrow 2 (floating, not touching boxes) -->
-  <line x1="580" y1="70" x2="620" y2="70"
-        stroke="#f97316" stroke-width="2"
-        marker-end="url(#arrow)"/>
+        <line x1="580" y1="70" x2="620" y2="70"
+              stroke="#f97316" stroke-width="2"
+              marker-end="url(#arrow)"/>
 
-  <!-- Box 3 -->
-  <rect x="640" y="30" width="240" height="80" rx="10"
-        fill="#ffffff" stroke="#d1d5db"/>
+        <rect x="640" y="30" width="240" height="80" rx="10"
+              fill="#ffffff" stroke="#d1d5db"/>
 
-  <text x="760" y="66" text-anchor="middle"
-        font-size="18" font-weight="700"
-        fill="#0f172a">
-    Measurement &amp; Feedback
-  </text>
-  <text x="760" y="92" text-anchor="middle"
-        font-size="13"
-        fill="#475569">
-    Signals · Learning
-  </text>
+        <text x="760" y="66" text-anchor="middle"
+              font-size="18" font-weight="700"
+              fill="#0f172a">
+          Measurement &amp; Feedback
+        </text>
+        <text x="760" y="92" text-anchor="middle"
+              font-size="13" fill="#475569">
+          Signals · Learning
+        </text>
 
-</svg>
-    
+      </svg>
     </div>
   </div>
 </section>
@@ -373,23 +367,21 @@
   <div class="container">
     <h2>Client Perspective</h2>
 
-    <div class="testimonial-grid">
-      <div class="testimonial">
-        <p>
-          His ability to optimize the supply chain and streamline our processes
-          helped to minimize risk, reduce costs, and improve order lead times.
-        </p>
-        <span>Director of Supply Chain</span>
-      </div>
+    <div class="testimonial-block">
+      <p class="testimonial-quote">
+        His ability to optimize the supply chain and streamline our processes
+        helped to minimize risk, reduce costs, and improve order lead times.
+      </p>
+      <p class="testimonial-author">Director of Supply Chain</p>
+    </div>
 
-      <div class="testimonial">
-        <p>
-          Helped uncover supply chain opportunities and various process improvements.
-          I am grateful for his insights and for increasing the bar for performance
-          and analytical support.
-        </p>
-        <span>General Manager, Global Export</span>
-      </div>
+    <div class="testimonial-block">
+      <p class="testimonial-quote">
+        Helped uncover supply chain opportunities and various process improvements.
+        I am grateful for his insights and for increasing the bar for performance
+        and analytical support.
+      </p>
+      <p class="testimonial-author">General Manager, Global Export</p>
     </div>
 
   </div>
