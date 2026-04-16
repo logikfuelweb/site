@@ -252,68 +252,74 @@
       not replace it.
     </p>
 
-<svg viewBox="0 0 960 180" width="100%" height="180" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="7" refY="5"
-            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f97316" />
-    </marker>
+<svg viewBox="0 0 900 170" width="100%" height="170"
+     xmlns="http://www.w3.org/2000/svg">
 
-    <linearGradient id="flow" x1="0" x2="1">
-      <stop offset="0%" stop-color="#f97316" />
-      <stop offset="100%" stop-color="#fb923c" />
-    </linearGradient>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10"
+            refX="0" refY="3" orient="auto"
+            markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#f97316"/>
+    </marker>
   </defs>
 
-  <!-- Stage 1 -->
-  <rect x="30" y="30" width="260" height="100" rx="14"
-        fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5" />
+  <!-- Box 1 -->
+  <rect x="20" y="30" width="240" height="80" rx="10"
+        fill="#ffffff" stroke="#d1d5db"/>
 
-  <text x="160" y="68" text-anchor="middle"
-        font-size="18" font-weight="700" fill="#0f172a">
-    Operations & Flow
+  <text x="140" y="66" text-anchor="middle"
+        font-size="18" font-weight="700"
+        fill="#0f172a">
+    Operations &amp; Flow
   </text>
-  <text x="160" y="96" text-anchor="middle"
-        font-size="13" fill="#475569">
-    Plan • Make • Move
-  </text>
-
-  <!-- Arrow 1 -->
-  <line x1="290" y1="80" x2="380" y2="80"
-        stroke="url(#flow)" stroke-width="3"
-        marker-end="url(#arrow)" />
-
-  <!-- Stage 2 -->
-  <rect x="380" y="30" width="260" height="100" rx="14"
-        fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5" />
-
-  <text x="510" y="68" text-anchor="middle"
-        font-size="18" font-weight="700" fill="#0f172a">
-    Decision Architecture
-  </text>
-  <text x="510" y="96" text-anchor="middle"
-        font-size="13" fill="#475569">
-    Ownership • Tradeoffs • Cadence
+  <text x="140" y="92" text-anchor="middle"
+        font-size="13"
+        fill="#475569">
+    Plan · Make · Move
   </text>
 
-  <!-- Arrow 2 -->
-  <line x1="640" y1="80" x2="730" y2="80"
-        stroke="url(#flow)" stroke-width="3"
-        marker-end="url(#arrow)" />
+  <!-- Arrow 1 (floating, not touching boxes) -->
+  <line x1="280" y1="70" x2="320" y2="70"
+        stroke="#f97316" stroke-width="2"
+        marker-end="url(#arrow)"/>
 
-  <!-- Stage 3 -->
-  <rect x="730" y="30" width="200" height="100" rx="14"
-        fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5" />
+  <!-- Box 2 (neutral, not highlighted) -->
+  <rect x="340" y="30" width="220" height="80" rx="10"
+        fill="#ffffff" stroke="#d1d5db"/>
 
-  <text x="830" y="68" text-anchor="middle"
-        font-size="18" font-weight="700" fill="#0f172a">
-    Measurement
+  <text x="450" y="66" text-anchor="middle"
+        font-size="18" font-weight="700"
+        fill="#0f172a">
+    Decision Structure
   </text>
-  <text x="830" y="96" text-anchor="middle"
-        font-size="13" fill="#475569">
-    Signals • Feedback • Learning
+  <text x="450" y="92" text-anchor="middle"
+        font-size="13"
+        fill="#475569">
+    Ownership · Tradeoffs
   </text>
+
+  <!-- Arrow 2 (floating, not touching boxes) -->
+  <line x1="580" y1="70" x2="620" y2="70"
+        stroke="#f97316" stroke-width="2"
+        marker-end="url(#arrow)"/>
+
+  <!-- Box 3 -->
+  <rect x="640" y="30" width="240" height="80" rx="10"
+        fill="#ffffff" stroke="#d1d5db"/>
+
+  <text x="760" y="66" text-anchor="middle"
+        font-size="18" font-weight="700"
+        fill="#0f172a">
+    Measurement &amp; Feedback
+  </text>
+  <text x="760" y="92" text-anchor="middle"
+        font-size="13"
+        fill="#475569">
+    Signals · Learning
+  </text>
+
 </svg>
+    
     </div>
   </div>
 </section>
