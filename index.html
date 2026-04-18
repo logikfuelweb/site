@@ -258,6 +258,31 @@ nav {
       color: var(--gray-500);
     }
 
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 12px;
+}
+
+.footer-logo {
+  height: 28px;
+  width: auto;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.footer-logo:hover {
+  opacity: 1;
+}
+
+.footer-copy {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--gray-500);
+}
+    
     /* ================= RESPONSIVE ================= */
 
 
@@ -497,7 +522,37 @@ Helped undercover sale chain opportunities and various process improvements. I a
 </section>
 
 <footer>
-  © 2026 LogikFuel LLC · York County, South Carolina
+  <div class="footer-links">
+    <a
+      href="https://www.linkedin.com/company/logikfuel/"
+      target="_blank"
+      rel="noopener"
+      aria-label="LogikFuel on LinkedIn"
+    >
+      <img
+        src="assets/images/linkedin.png"
+        alt="LinkedIn"
+        class="footer-logo"
+      />
+    </a>
+
+    <a
+      href="https://scbizdev.sccommerce.com/sc-industry-directory/company/48860dad-9be3-4d5e-9a9f-59c6eb5ad083"
+      target="_blank"
+      rel="noopener"
+      aria-label="SourceSC Industry Directory"
+    >
+      <img
+        src="assets/images/sccommerce_logo.png"
+        alt="South Carolina Commerce"
+        class="footer-logo"
+      />
+    </a>
+  </div>
+
+  <div class="footer-copy">
+    © 2026 LogikFuel LLC · York County, South Carolina
+  </div>
 </footer>
 
 </body>
