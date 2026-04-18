@@ -55,12 +55,14 @@ nav a:hover {
 }
 
 /* Nav is the layout grid */
+
 nav {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  position: relative;
+  justify-content: space-between;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 /* Logo wrapper is what we position */
@@ -72,6 +74,9 @@ nav {
 
 .hero {
   padding-top: calc(48px + 120px);
+  padding-bottom: 44px;
+  background:
+    radial-gradient(800px circle at 15% 20%, var(--orange-soft), transparent 70%);
 }
     
 /* Logo itself is dynamic but bounded */
@@ -268,9 +273,10 @@ nav {
 <header>
   <div class="container">
     <nav>
-      <a href="/" class="logo-wrapper">
-        <img src="assets/images/logo.svg" alt="LogikFuel logo" class="logo">
-      </a>
+      
+<img src="assets/images/logo.svg"
+     alt="LogikFuel logo"
+     class="logo">
 
       <div class="nav-links">
         <a href="#architecture">Architecture</a>
