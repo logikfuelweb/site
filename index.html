@@ -37,7 +37,7 @@
 
 /* Header stays narrow */
 header {
-  height: 64px;
+  height: 195px;
   border-bottom: 1px solid var(--border);
   background: white;
   position: relative;
@@ -60,14 +60,16 @@ nav {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* important */
+  justify-content: flex-end;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 /* Logo wrapper is what we position */
+
 .logo-wrapper {
-  position: absolute;
-  left: 0;
-  top: -60px; /* pulls logo upward safely */
+  display: flex;
+  align-items: center;
 }
     
 /* Logo itself is dynamic but bounded */
@@ -86,7 +88,8 @@ nav {
 
     /* ================= HERO ================= */
 
-.hero {.heropx 0 44px;
+.hero {
+  padding: 48px 0 44px;
   background:
     radial-gradient(
       800px circle at 15% 20%,
@@ -94,7 +97,7 @@ nav {
       transparent 70%
     );
 }
-
+    
     .hero h1 {
       font-size: 2.6rem;
       max-width: 900px;
