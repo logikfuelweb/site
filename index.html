@@ -35,51 +35,43 @@
 
     /* ================= HEADER ================= */
 
+/* Header stays narrow */
 header {
   height: 64px;
   border-bottom: 1px solid var(--border);
   background: white;
   position: relative;
-  overflow: visible;
 }
 
+/* Nav is the layout grid */
 nav {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   position: relative;
 }
 
-nav > div {
-  margin-left: clamp(200px, 22vw, 260px);
+/* Logo wrapper is what we position */
+.logo-wrapper {
+  position: absolute;
+  left: 0;
+  top: -60px; /* pulls logo upward safely */
 }
 
-    nav a {
-      margin-left: 24px;
-      text-decoration: none;
-      font-weight: 600;
-      color: var(--gray-900);
-    }
+/* Logo itself is dynamic but bounded */
+.logo {
+  height: clamp(160px, 18vw, 200px);
+  width: auto;
+  display: block;
+}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    /* KEY FIX: hard cap the logo size */
-
-  .logo {
-    /* Dynamic visual sizing */
-    height: clamp(160px, 18vw, 200px);
-  
-    width: auto;
-    display: block;
-  
-    position: absolute;
-    left: 24px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
+/* Explicitly reserve space for nav links */
+.nav-links {
+  display: flex;
+  gap: 24px;
+  margin-left: clamp(200px, 22vw, 260px);
+}
 
     /* ================= HERO ================= */
 
@@ -261,9 +253,11 @@ nav > div {
 <header>
   <div class="container">
     <nav>
+      <a href="/" class="logo-wrapper">
         <img src="assets/images/logo.svg" alt="LogikFuel logo" class="logo">
       </a>
-      <div>
+
+      <div class="nav-links">
         <a href="#architecture">Architecture</a>
         <a href="#partnership">Partnership</a>
         <a href="#contact">Contact</a>
