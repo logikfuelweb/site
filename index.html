@@ -35,18 +35,25 @@
 
     /* ================= HEADER ================= */
 
-    header {
-      height: 64px;
-      border-bottom: 1px solid var(--border);
-      background: white;
-    }
+header {
+  height: 64px;
+  border-bottom: 1px solid var(--border);
+  background: white;
+  position: relative;
+  overflow: visible;
+}
 
-    nav {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+nav > div {
+  margin-left: clamp(200px, 22vw, 260px);
+}
 
     nav a {
       margin-left: 24px;
@@ -60,11 +67,19 @@
     }
 
     /* KEY FIX: hard cap the logo size */
-    .logo {
-      height: 185px;     /* CHANGE THIS safely */
-      width: auto;
-      display: block;
-    }
+
+  .logo {
+    /* Dynamic visual sizing */
+    height: clamp(160px, 18vw, 200px);
+  
+    width: auto;
+    display: block;
+  
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
     /* ================= HERO ================= */
 
