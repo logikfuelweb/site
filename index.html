@@ -71,13 +71,6 @@ nav {
   left: 0;
   top: -60px; /* pulls logo upward safely */
 }
-
-.hero {
-  padding-top: calc(48px + 120px);
-  padding-bottom: 44px;
-  background:
-    radial-gradient(800px circle at 15% 20%, var(--orange-soft), transparent 70%);
-}
     
 /* Logo itself is dynamic but bounded */
 .logo {
@@ -94,9 +87,10 @@ nav {
 }
 
     /* ================= HERO ================= */
-
+    
     .hero {
-      padding: 48px 0 44px;
+      padding-top: calc(48px + 120px);
+      padding-bottom: 44px;
       background:
         radial-gradient(800px circle at 15% 20%, var(--orange-soft), transparent 70%);
     }
@@ -268,15 +262,17 @@ nav {
       }
     }
   </style>
+
 </head>
+<body>
 
 <header>
   <div class="container">
     <nav>
-      
-<img src="assets/images/logo.svg"
-     alt="LogikFuel logo"
-     class="logo">
+
+<div class="logo-wrapper">
+  assets/images/logo.svg class="logo">
+</div>
 
       <div class="nav-links">
         <a href="#architecture">Architecture</a>
@@ -286,8 +282,6 @@ nav {
     </nav>
   </div>
 </header>
-  
-<body>
 
 <section class="hero">
   <div class="container">
