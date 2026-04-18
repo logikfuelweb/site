@@ -17,7 +17,16 @@
       --border: #e5e7eb;
     }
 
-    * { box-sizing: border-box; }
+    * {
+    box-sizing: border-box;
+    }
+    
+    /* prevent horizontal scrolling on mobile */
+    
+    html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    }
 
     body {
       margin: 0;
@@ -251,19 +260,41 @@ nav {
 
     /* ================= RESPONSIVE ================= */
 
-    @media (max-width: 900px) {
-      .capability {
-        grid-template-columns: 1fr;
-      }
 
-      .testimonial-row {
-        grid-template-columns: 1fr;
-      }
+@media (max-width: 768px) {
 
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-    }
+  header {
+    height: auto;
+    padding: 12px 0;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .logo-wrapper {
+    margin-bottom: 8px;
+  }
+  
+.container {
+  padding: 0 16px;
+}
+
+.hero h1 {
+  font-size: 2rem;
+}
+  
+  .nav-links {
+    width: 100%;
+    justify-content: space-around;
+    padding: 8px 0;
+    font-size: 0.9rem;
+  }
+}
+
   </style>
 
 </head>
@@ -435,8 +466,7 @@ nav {
 
       <div class="testimonial-block">
         <p class="testimonial-quote">
-          Helped uncover supply chain opportunities and raised the bar for
-          analytical support across operations.
+Helped undercover sale chain opportunities and various process improvements. I am grateful for his insights and for increasing the bar for performance and analytical support.
         </p>
         <p class="testimonial-author">General Manager, Global Export</p>
       </div>
