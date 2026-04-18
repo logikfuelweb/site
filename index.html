@@ -60,9 +60,7 @@ nav {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  justify-content: flex-end; /* important */
 }
 
 /* Logo wrapper is what we position */
@@ -80,17 +78,15 @@ nav {
 }
 
 /* Explicitly reserve space for nav links */
+   
 .nav-links {
   display: flex;
   gap: 24px;
-  margin-left: clamp(200px, 22vw, 260px);
 }
 
     /* ================= HERO ================= */
-    
-.hero {
-  padding-top: calc(48px + 80px);
-  padding-bottom: 44px;
+
+.hero {.heropx 0 44px;
   background:
     radial-gradient(
       800px circle at 15% 20%,
