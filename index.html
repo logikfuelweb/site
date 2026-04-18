@@ -61,7 +61,7 @@
 
     /* KEY FIX: hard cap the logo size */
     .logo {
-      height: 32px;     /* CHANGE THIS safely */
+      height: 185px;     /* CHANGE THIS safely */
       width: auto;
       display: block;
     }
@@ -281,8 +281,82 @@
       not replace it.
     </p>
 
+<section id="architecture">
+  <div class="container">
+    <h2>The Architecture View</h2>
+    <p class="subhead">
+      Sustainable performance requires clarity in how operations,
+      decisions, and feedback loops fit together.
+    </p>
+
     <div class="architecture-diagram">
-      <!-- Insert your approved SVG diagram here -->
+      <svg
+        viewBox="0 0 900 170"
+        width="100%"
+        height="170"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <marker
+            id="arrow"
+            markerWidth="10"
+            markerHeight="10"
+            refX="0"
+            refY="3"
+            orient="auto"
+            markerUnits="strokeWidth"
+          >
+            <path d="M0,0 L0,6 L9,3 z" fill="#f97316"/>
+          </marker>
+        </defs>
+
+        <rect x="20" y="30" width="240" height="80" rx="10"
+              fill="#ffffff" stroke="#d1d5db" />
+
+        <text x="140" y="66" text-anchor="middle"
+              font-size="18" font-weight="700"
+              fill="#0f172a">
+          Operations &amp; Flow
+        </text>
+        <text x="140" y="92" text-anchor="middle"
+              font-size="13" fill="#475569">
+          Plan · Make · Move
+        </text>
+
+        <line x1="280" y1="70" x2="320" y2="70"
+              stroke="#f97316" stroke-width="2"
+              marker-end="url(#arrow)" />
+
+        <rect x="340" y="30" width="220" height="80" rx="10"
+              fill="#ffffff" stroke="#d1d5db" />
+
+        <text x="450" y="66" text-anchor="middle"
+              font-size="18" font-weight="700"
+              fill="#0f172a">
+          Decision Structure
+        </text>
+        <text x="450" y="92" text-anchor="middle"
+              font-size="13" fill="#475569">
+          Ownership · Tradeoffs
+        </text>
+
+        <line x1="580" y1="70" x2="620" y2="70"
+              stroke="#f97316" stroke-width="2"
+              marker-end="url(#arrow)" />
+
+        <rect x="640" y="30" width="240" height="80" rx="10"
+              fill="#ffffff" stroke="#d1d5db" />
+
+        <text x="760" y="66" text-anchor="middle"
+              font-size="18" font-weight="700"
+              fill="#0f172a">
+          Measurement &amp; Feedback
+        </text>
+        <text x="760" y="92" text-anchor="middle"
+              font-size="13" fill="#475569">
+          Signals · Learning
+        </text>
+      </svg>
     </div>
   </div>
 </section>
@@ -348,16 +422,15 @@
   </div>
 </section>
 
-<section id="contact" class="cta">
-  <div class="container">
-    <h2>Let’s Think It Through</h2>
-    <p>
-      If you’re navigating complexity, tradeoffs, or uncertainty
-      in your supply chain, the right thought partner makes the difference.
+<section id="contact" class="cta">>
+      If you’re navigating complexity or tradeoffs in your supply chain,
+      the right thought partner makes the difference.
     </p>
-    info@logikfuel.comContact LogikFuel</a>
+    <a href="mailto:info@logikfuel.com">Contact LogikFuel</a>
   </div>
 </section>
+  <div class="container">
+    <h2>Let’s Think It Through</h2>
 
 <footer>
   © 2026 LogikFuel LLC · York County, South Carolina
