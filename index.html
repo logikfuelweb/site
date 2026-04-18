@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>LogikFuel | Supply Chain Architecture Thought Partner</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     :root {
@@ -23,40 +23,53 @@
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       color: var(--gray-900);
-      background: #ffffff;
+      background: white;
       line-height: 1.55;
     }
 
     .container {
-      max-width: 185px;
+      max-width: 1080px;
       margin: 0 auto;
       padding: 0 24px;
     }
 
-    /* Header */
-    
-header {
-  height: 64px;
-  border-bottom: 1px solid var(--border);
-  background: white;
-}
+    /* ================= HEADER ================= */
 
-nav {
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    header {
+      height: 64px;
+      border-bottom: 1px solid var(--border);
+      background: white;
+    }
 
-.logo {
-  max-height: 100%;
-  width: auto;
-  display: block;
-}
-    
-    /* Hero */
+    nav {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav a {
+      margin-left: 24px;
+      text-decoration: none;
+      font-weight: 600;
+      color: var(--gray-900);
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* KEY FIX: hard cap the logo size */
+    .logo {
+      height: 32px;     /* CHANGE THIS safely */
+      width: auto;
+      display: block;
+    }
+
+    /* ================= HERO ================= */
+
     .hero {
-      padding: 56px 0 48px;
+      padding: 48px 0 44px;
       background:
         radial-gradient(800px circle at 15% 20%, var(--orange-soft), transparent 70%);
     }
@@ -64,7 +77,7 @@ nav {
     .hero h1 {
       font-size: 2.6rem;
       max-width: 900px;
-      margin-bottom: 18px;
+      margin: 0 0 18px;
       letter-spacing: -0.02em;
     }
 
@@ -72,7 +85,7 @@ nav {
       max-width: 720px;
       font-size: 1.1rem;
       color: var(--gray-700);
-      margin-bottom: 26px;
+      margin: 0 0 24px;
     }
 
     .hero a {
@@ -83,17 +96,18 @@ nav {
       padding-bottom: 3px;
     }
 
-    /* Sections */
+    /* ================= SECTIONS ================= */
+
     section {
       padding: 56px 0;
     }
 
-    section#architecture {
-      padding-top: 40px;
-    }
-
     section.alt {
       background: #fafafa;
+    }
+
+    section#architecture {
+      padding-top: 40px;
     }
 
     h2 {
@@ -109,7 +123,8 @@ nav {
       margin-bottom: 32px;
     }
 
-    /* Architecture Diagram */
+    /* ================= ARCHITECTURE ================= */
+
     .architecture-diagram {
       border: 1px solid var(--border);
       border-radius: 12px;
@@ -117,7 +132,8 @@ nav {
       background: white;
     }
 
-    /* Capabilities */
+    /* ================= CAPABILITIES ================= */
+
     .capability {
       display: grid;
       grid-template-columns: 1fr 3fr;
@@ -141,7 +157,8 @@ nav {
       max-width: 680px;
     }
 
-    /* Outcomes */
+    /* ================= OUTCOMES ================= */
+
     .outcomes {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -155,10 +172,17 @@ nav {
       margin-bottom: 6px;
     }
 
-    /* Testimonials (stacked blocks) */
+    /* ================= TESTIMONIALS ================= */
+
+    .testimonial-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
     .testimonial-block {
-      max-width: 780px;
-      margin: 0 auto 48px;
       padding-left: 20px;
       border-left: 3px solid var(--border);
     }
@@ -167,7 +191,6 @@ nav {
       margin: 0 0 12px;
       font-size: 1.1rem;
       color: var(--gray-900);
-      line-height: 1.6;
     }
 
     .testimonial-author {
@@ -177,7 +200,8 @@ nav {
       color: var(--gray-700);
     }
 
-    /* CTA */
+    /* ================= CTA ================= */
+
     .cta {
       text-align: center;
       background:
@@ -201,8 +225,14 @@ nav {
       color: var(--gray-500);
     }
 
+    /* ================= RESPONSIVE ================= */
+
     @media (max-width: 900px) {
       .capability {
+        grid-template-columns: 1fr;
+      }
+
+      .testimonial-row {
         grid-template-columns: 1fr;
       }
 
@@ -218,11 +248,11 @@ nav {
 <header>
   <div class="container">
     <nav>
-      <img src="assets/images/logo.svg" alt="LogikFuel logo" class="logo">
+      assets/images/logo.svg>
       <div>
-        <a href="#architecture">Architecture</a>
-        <a href="#partnership">Partnership</a>
-        <a href="#contact">Contact</a>
+        #architectureArchitecture</a>
+        #partnershipPartnership</a>
+        #contactContact</a>
       </div>
     </nav>
   </div>
@@ -236,7 +266,7 @@ nav {
       decision pathways, and supporting analytics that enable resilient,
       deliberate operations.
     </p>
-    <a href="#contact">Start a conversation</a>
+    #contactStart a conversation</a>
   </div>
 </section>
 
@@ -250,65 +280,7 @@ nav {
     </p>
 
     <div class="architecture-diagram">
-      <svg viewBox="0 0 900 170" width="100%" height="170"
-           xmlns="http://www.w3.org/2000/svg">
-
-        <defs>
-          <marker id="arrow" markerWidth="10" markerHeight="10"
-                  refX="0" refY="3" orient="auto"
-                  markerUnits="strokeWidth">
-            <path d="M0,0 L0,6 L9,3 z" fill="#f97316"/>
-          </marker>
-        </defs>
-
-        <rect x="20" y="30" width="240" height="80" rx="10"
-              fill="#ffffff" stroke="#d1d5db"/>
-
-        <text x="140" y="66" text-anchor="middle"
-              font-size="18" font-weight="700"
-              fill="#0f172a">
-          Operations &amp; Flow
-        </text>
-        <text x="140" y="92" text-anchor="middle"
-              font-size="13" fill="#475569">
-          Plan · Make · Move
-        </text>
-
-        <line x1="280" y1="70" x2="320" y2="70"
-              stroke="#f97316" stroke-width="2"
-              marker-end="url(#arrow)"/>
-
-        <rect x="340" y="30" width="220" height="80" rx="10"
-              fill="#ffffff" stroke="#d1d5db"/>
-
-        <text x="450" y="66" text-anchor="middle"
-              font-size="18" font-weight="700"
-              fill="#0f172a">
-          Decision Structure
-        </text>
-        <text x="450" y="92" text-anchor="middle"
-              font-size="13" fill="#475569">
-          Ownership · Tradeoffs
-        </text>
-
-        <line x1="580" y1="70" x2="620" y2="70"
-              stroke="#f97316" stroke-width="2"
-              marker-end="url(#arrow)"/>
-
-        <rect x="640" y="30" width="240" height="80" rx="10"
-              fill="#ffffff" stroke="#d1d5db"/>
-
-        <text x="760" y="66" text-anchor="middle"
-              font-size="18" font-weight="700"
-              fill="#0f172a">
-          Measurement &amp; Feedback
-        </text>
-        <text x="760" y="92" text-anchor="middle"
-              font-size="13" fill="#475569">
-          Signals · Learning
-        </text>
-
-      </svg>
+      <!-- Insert your approved SVG diagram here -->
     </div>
   </div>
 </section>
@@ -323,25 +295,17 @@ nav {
 
     <div class="capability">
       <h3>Supply Chain Architecture</h3>
-      <p>
-        Designing how planning, execution, and performance management fit together.
-      </p>
+      <p>Designing how planning, execution, and performance management fit together.</p>
     </div>
 
     <div class="capability">
       <h3>Decision Framing</h3>
-      <p>
-        Helping leaders reason through constraints, priorities,
-        and second‑order impacts.
-      </p>
+      <p>Helping leaders reason through constraints and second‑order impacts.</p>
     </div>
 
     <div class="capability">
       <h3>Analytics as Enablement</h3>
-      <p>
-        Ensuring measurement and analytics reinforce the architecture,
-        rather than distort it.
-      </p>
+      <p>Ensuring analytics reinforce architecture rather than distort it.</p>
     </div>
   </div>
 </section>
@@ -350,10 +314,10 @@ nav {
   <div class="container">
     <h2>What Changes</h2>
     <div class="outcomes">
-      <div><strong>Clarity</strong>Explicit decisions and ownership</div>
-      <div><strong>Stability</strong>Less reactive firefighting</div>
-      <div><strong>Trust</strong>Signals align with reality</div>
-      <div><strong>Continuity</strong>Architecture that endures change</div>
+      <div><strong>Clarity</strong>Explicit ownership</div>
+      <div><strong>Stability</strong>Less firefighting</div>
+      <div><strong>Trust</strong>Credible signals</div>
+      <div><strong>Continuity</strong>Enduring structure</div>
     </div>
   </div>
 </section>
@@ -362,23 +326,23 @@ nav {
   <div class="container">
     <h2>Client Perspective</h2>
 
-    <div class="testimonial-block">
-      <p class="testimonial-quote">
-        His ability to optimize the supply chain and streamline our processes
-        helped to minimize risk, reduce costs, and improve order lead times.
-      </p>
-      <p class="testimonial-author">Director of Supply Chain</p>
-    </div>
+    <div class="testimonial-row">
+      <div class="testimonial-block">
+        <p class="testimonial-quote">
+          His ability to optimize the supply chain and streamline our processes
+          helped minimize risk, reduce costs, and improve order lead times.
+        </p>
+        <p class="testimonial-author">Director of Supply Chain</p>
+      </div>
 
-    <div class="testimonial-block">
-      <p class="testimonial-quote">
-        Helped uncover supply chain opportunities and various process improvements.
-        I am grateful for his insights and for increasing the bar for performance
-        and analytical support.
-      </p>
-      <p class="testimonial-author">General Manager, Global Export</p>
+      <div class="testimonial-block">
+        <p class="testimonial-quote">
+          Helped uncover supply chain opportunities and raised the bar for
+          analytical support across operations.
+        </p>
+        <p class="testimonial-author">General Manager, Global Export</p>
+      </div>
     </div>
-
   </div>
 </section>
 
@@ -386,10 +350,10 @@ nav {
   <div class="container">
     <h2>Let’s Think It Through</h2>
     <p>
-      If you're navigating complexity, tradeoffs, or uncertainty in your supply chain,
-      the right thought partner makes the difference.
+      If you’re navigating complexity, tradeoffs, or uncertainty
+      in your supply chain, the right thought partner makes the difference.
     </p>
-    <a href="mailto:info@logikfuel.com">Contact LogikFuel</a>
+    info@logikfuel.comContact LogikFuel</a>
   </div>
 </section>
 
